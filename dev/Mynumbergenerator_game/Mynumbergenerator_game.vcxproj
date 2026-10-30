@@ -139,7 +139,18 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GameMenu.cpp" />
     <ClCompile Include="Mynumbergenerator_game.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SafeEngine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConsoleColor.h" />
+    <ClInclude Include="GameArt.h" />
+    <ClInclude Include="GameMenu.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="SafeEngine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,116 @@
+I created this file to hold some the items i will create but im not ready to use yet.
+I still learning. I have created an issue for myself.
+I put some ascii art I was playing around with and I want to use it. 
+I will save it in ths text file so i can use the code later. 
+I am aware that this would usally be in a healper file but this just for this project 
+and I am just trying to gain experience by practing the craft I am pursuing.
+
+void DispayLocked_Safe()
+{
+	std::cout << " ⌈——————————————————————————————————————————————————————————⌉ \n";
+	std::cout << " | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄ | \n";
+	std::cout << " | ⇊                                                       ⇊ | \n";
+	std::cout << " | ⇊                                                       ⇊ | \n";
+	std::cout << " | ⇊	    ==========================================       ⇊ | \n";
+	std::cout << " | ⇊      |                                         |      ⇊ | \n";
+	std::cout << " | ⇊      |                                         |      ⇊ | \n";
+	std::cout << " | ⇊      |       ( 7 )  ( 8 )  ( 9 )               |      ⇊ | \n";
+	std::cout << " | ⇊      |       ( 4 )  ( 5 )  ( 6 )       _       |      ⇊ | \n";
+	std::cout << " | ⇊      |       ( 1 )  ( 2 )  ( 3 )     /  /      |      ⇊ | \n";
+	std::cout << " | ⇊      |                               |  |      |      ⇊ | \n";
+	std::cout << " | ⇊      |                               |  |      |      ⇊ | \n";
+	std::cout << " | ⇊      |                               |  |      |      ⇊ | \n";
+	std::cout << " | ⇊      |         _ _ _ _ _ _ _ _       |  |      |      ⇊ | \n";
+	std::cout << " | ⇊      |       {                 }      \ _\     |      ⇊ | \n";
+	std::cout << " | ⇊      |       {  L O C K E D    }               |      ⇊ | \n";
+	std::cout << " | ⇊      |       { _ _ _ _ _ _ _ _ }               |      ⇊ | \n";
+	std::cout << " | ⇊      |                                         |      ⇊ | \n";
+	std::cout << " | ⇊	    ==========================================       ⇊ | \n";
+	std::cout << " | ⇊                                                       ⇊ | \n";
+	std::cout << " |  ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄ | \n";
+	std::cout << " ⌊————————————————————————————————————————————————————————— ⌋ \n";
+}
+
+
+
+
+
+
+
+
+
+
+string name = Input::GetString("Enter your please: ");
+
+
+
+
+Im not quite sure where this will be located or if I will be creative and make fucntion and call to the main. 
+For now I will let it live in this file untill im raedy.
+
+void Display_Exit ()
+{
+	std::cout << " ⌈——————————————————————————————————————————————————————————⌉ \n";
+	std::cout << " | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄ | \n";
+	std::cout << " | ⇊                                                       ⇊ | \n";
+	std::cout << " | ⇊                                                       ⇊ | \n";
+	std::cout << " | ⇊	    ==========================================  ⌉    ⇊ | \n";
+	std::cout << " | ⇊      |                                         | |    ⇊ | \n";
+	std::cout << " | ⇊      |                                         |  )   ⇊ | \n";
+	std::cout << " | ⇊      |       ( 7 )  ( 8 )  ( 9 )               | |    ⇊ | \n";
+	std::cout << " | ⇊      |       ( 4 )  ( 5 )  ( 6 )               |  )   ⇊ | \n";
+	std::cout << " | ⇊      |       ( 1 )  ( 2 )  ( 3 )      ◜◝       | |    ⇊ | \n";
+	std::cout << " | ⇊      |                               |  |      |  )   ⇊ | \n";
+	std::cout << " | ⇊      |                               |  |      | |    ⇊ | \n";
+	std::cout << " | ⇊      |                               |  |      |  )   ⇊ | \n";
+	std::cout << " | ⇊      |         _ _ _ _ _ _ _ _       |  |      | |    ⇊ | \n";
+	std::cout << " | ⇊      |       {                 }      ◟◞       |  )   ⇊ | \n";
+	std::cout << " | ⇊      |       {      EXIT       }               | |    ⇊ | \n";
+	std::cout << " | ⇊      |       { _ _ _ _ _ _ _ _ }               |  )   ⇊ | \n";
+	std::cout << " | ⇊      |                                         | |    ⇊ | \n";
+	std::cout << " | ⇊	    ==========================================  ⌋    ⇊ | \n";
+	std::cout << " | ⇊                                                       ⇊ | \n";
+	std::cout << " |  ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄ | \n";
+	std::cout << " ⌊————————————————————————————————————————————————————————— ⌋ \n";
+}
+
+
+	MenuChoice choice = static_cast<MenuChoice>(input);
+
+	switch (choice)
+	{
+	case MenuChoice::Player:
+		std::cout << "Choose your character ?\n";
+
+		break;
+
+	case MenuChoice::Level:
+		std::cout << "Select the level you wish to play? " << std::endl;
+		std::cout << "1. Easy Guess a number between 1 - 100 out of 15 chances.\n";
+		std::cout << "2. Hard Guess a number between 1 - 150 out of 12 chances.\n";
+		break;
+
+	case MenuChoice::HighScores:
+		std::cout << "Loading the High Scores...\n";
+	
+		break;
+	case MenuChoice::End:
+		std::cout << "GAMEOVER  X_X\n";
+		break;
+	}
+	return choice;
+
+
+
+
+
+
+
+
+
+
+
+
+
+	⁆⇸© ‿ ©⇷⁅
+	

@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Mynumbergenerator_game.vcxproj" />
+  <Project Path="Mynumbergenerator_game.vcxproj" Id="52148ea2-039c-45c7-a2ed-2bea8ee12ed1" />
 </Solution>
