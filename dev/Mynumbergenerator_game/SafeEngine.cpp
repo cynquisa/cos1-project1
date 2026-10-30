@@ -45,7 +45,7 @@ bool Unlock::playLevel(int maxNumber, int maxChances)
 
 	while (chancesLeft > 0)
 	{
-		int currentGuess = Input::GetString("Enter your guess: ", 1, maxNumber);
+		int currentGuess = Input::GetNumber("Enter your guess: ", 1, maxNumber);
 	}
 }
 
