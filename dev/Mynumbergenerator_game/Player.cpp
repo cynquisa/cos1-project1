@@ -45,8 +45,6 @@ Player Player::createNewplayer()
 	return Player(nameInput, selectedSymbol, 0, 0);
 }
 
-
-
 std::string Player::getName() const
 {
 	return name;
@@ -66,7 +64,6 @@ std::string Player::getCharacterSymbol() const
 {
 	return CharacterSymbol;
 }
-
 
 void Player::recordResult(bool won)
 {

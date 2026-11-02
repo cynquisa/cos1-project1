@@ -2,10 +2,29 @@
 //
 
 #include <iostream>
+#include "GameMenu.h"
+#include "SafeEngine.h"
+#include "Player.h"
+#include "Input.h"
+#include <string>
+#include <vector>
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Unlock safeGame;
+    bool isRunning = true;
+
+    Player* activePlayer = nullptr;
+
+	std::cout << " =*==*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n";
+	std::cout << " =*=                                                       =*= \n";
+	std::cout << "  *                                                         *  \n";
+	std::cout << " =*=              Welcome To Safe Escape                   =*= \n";
+	std::cout << "  *                                                         *  \n";
+	std::cout << " =*=                                                       =*= \n";
+	std::cout << " =*=*=*=*=**=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n";
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

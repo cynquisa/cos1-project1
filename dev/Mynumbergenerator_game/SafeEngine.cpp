@@ -71,13 +71,13 @@ bool Unlock::playLevel(int maxNumber, int maxChances)
 		}
 
 	}
-}
+
 if (!crackedSafe)
 {
-	<< std::cout << "GAMEOVER !! You have run out of guessess. The correct combination was: " << getValue()<< "\n";
+	std::cout << "GAMEOVER !! You have run out of guessess. The correct combination was: " << getValue() << "\n";
 }
-return crackedSafe;
-
+	return crackedSafe;
+}
 
 
 
