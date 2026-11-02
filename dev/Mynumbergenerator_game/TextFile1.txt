@@ -1,0 +1,26 @@
+{
+	generate(1, maxNumber);
+
+	int chancesLeft = maxChances;
+	bool crackedSafe = false;
+
+	std::cout << "\nYOU ARE TRAPPED!! You must enter combination between 1 and " << maxNumber << ".\n";
+	std::cout << "You have " << maxChances << "attempts remaining.\n";
+
+	while (chancesLeft > 0)
+	{
+		int currentGuess = Input::GetNumber("Enter your guess: ", 1, maxNumber);
+	}
+}
+
+
+bool Unlock::playLevel(int maxNumber, int maxChances)
+{
+	this->generate(1, maxNumber);
+	int attempt = 0;
+	bool safeCracked = false;
+
+	std::cout << "\nYOU ARE TRAPPED!! You must find the combination to escape.\n";
+
+
+}
