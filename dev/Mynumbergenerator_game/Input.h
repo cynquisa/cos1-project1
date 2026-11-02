@@ -45,7 +45,7 @@ namespace Input
 			{
 				return input;
 			}
-				std::cout << " [ERROR] You cannot leave empty.\n";
+				std::cout << " [ERROR] You must ener a valid response.\n";
 		}
 	}
 }

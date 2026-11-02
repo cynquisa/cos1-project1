@@ -25,8 +25,6 @@ public:
 
 	int getMatchesWon() const;
 
-
-
 	void recordResult(bool won);
 	void displayHighScore();
 

@@ -40,23 +40,44 @@ bool Unlock::playLevel(int maxNumber, int maxChances)
 	int chancesLeft = maxChances;
 	bool crackedSafe = false;
 
-	std::cout << "\nYOU ARE TRAPPED!! You must enter combinat between 1 and " << maxNumber << ".\n";
+	std::cout << "\nYOU ARE TRAPPEd!! You must guess the combination to escape.\n";
+	std::cout << "Enter a number between 1 and " << maxNumber << ".\n";
 	std::cout << "You have " << maxChances << "attempts remaining.\n";
 
-	while (chancesLeft > 0)
+	while (chancesLeft > 0 && !crackedSafe)
 	{
 		int currentGuess = Input::GetNumber("Enter your guess: ", 1, maxNumber);
+		GuessResult result = evaluateGuess(currentGuess);
+
+		if (result == GuessResult::TooHigh)
+		{
+			std::cout << "Too high! Try a lower number.\n";
+			chancesLeft--;
+		}
+		else if (result == GuessResult::TooLow)
+		{
+			std::cout << "Too low! Enter a higher number.\n";
+			chancesLeft--;
+		}
+		else if (result == GuessResult::Correct)
+		{
+			std::cout << "\nAmazing!! You have crakced the safe and can escape now!\n";
+			crackedSafe = true;
+		}
+
+		if (!crackedSafe && chancesLeft > 0)
+		{
+			std::cout << "Chances remaining: " << chancesLeft << "\n\n";
+		}
+
 	}
 }
-
-
-bool Unlock::playLevel(int maxNumber, int maxChances)
+if (!crackedSafe)
 {
-	this->generate(1, maxNumber);
-	int attempt = 0;
-	bool safeCracked = false;
-
-	std::cout << "\nYOU ARE TRAPPED!! You must find the combination to escape.\n";
-
-
+	<< std::cout << "GAMEOVER !! You have run out of guessess. The correct combination was: " << getValue()<< "\n";
 }
+return crackedSafe;
+
+
+
+
