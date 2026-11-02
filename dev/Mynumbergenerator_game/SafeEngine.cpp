@@ -33,16 +33,24 @@ GuessResult Unlock::evaluateGuess(int userGuess) const
 	}
 	return GuessResult::Correct;
 }
-bool Unlock::playLevel(int maxNumber, int maxChances)
+bool Unlock::playLevel(Player& activePlayer)
 {
+	std::cout << "Select Difficulty Level:\n";
+	std::cout << "1. Easy Guess a number between 1 - 100 out of 15 chances.\n";
+	std::cout << "2. Hard Guess a number between 1 - 150 out of 12 chances.\n";
+	
+	int levelChoice = Input::GetNumber("Enter game mode (1-2) : ", 1, 2);
+	int maxNumber = (levelChoice == 1) ? 100 : 150;
+	int chancesLeft = (levelChoice == 1) ? 15 : 12;
+
+	bool crackedSafe = false;
+
 	generate(1, maxNumber);
 
-	int chancesLeft = maxChances;
-	bool crackedSafe = false;
 
 	std::cout << "\nYOU ARE TRAPPEd!! You must guess the combination to escape.\n";
 	std::cout << "Enter a number between 1 and " << maxNumber << ".\n";
-	std::cout << "You have " << maxChances << "attempts remaining.\n";
+	std::cout << "You have " << chancesLeft << "attempts remaining.\n";
 
 	while (chancesLeft > 0 && !crackedSafe)
 	{
@@ -76,6 +84,8 @@ if (!crackedSafe)
 {
 	std::cout << "GAMEOVER !! You have run out of guessess. The correct combination was: " << getValue() << "\n";
 }
+	activePlayer.recordResult(crackedSafe);
+
 	return crackedSafe;
 }
 

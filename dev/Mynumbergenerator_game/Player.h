@@ -15,7 +15,8 @@ public:
 	Player(std::string name, std::string CharacterSymbol, int numOfMatches, int matchesWon);
 
 	~Player();
-	static Player createNewplayer();
+
+	static Player createNewPlayer();
 
 	std::string getName() const;
 

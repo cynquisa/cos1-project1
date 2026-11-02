@@ -26,7 +26,7 @@ public:
 
 	GuessResult evaluateGuess(int userGuess) const;
 
-	bool playLevel(int maxNumber, int maxChances);
+	bool playLevel(Player&  activePlayer);
 
 	
 };

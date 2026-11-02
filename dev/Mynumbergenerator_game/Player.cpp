@@ -17,7 +17,7 @@ Player::Player(std::string name, std::string CharacterSymbol, int numOfMatches, 
 {
 }
 
-Player Player::createNewplayer()
+Player Player::createNewPlayer()
 
 {
 	std::cout << "※※※※※※※※※※※※※※※※※※ Player Creation ※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n";
