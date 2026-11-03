@@ -74,7 +74,7 @@ void Player::recordResult(bool won)
 	}
 }
 
-void Player::displayHighScore()
+void Player::displayHighScore() const
 {
 	std::cout << "\n========================================================== = \n";
 	std::cout << "Player Stats: " << name << "Avatar: " << CharacterSymbol << '\n';

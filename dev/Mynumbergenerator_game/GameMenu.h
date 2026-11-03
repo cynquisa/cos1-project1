@@ -1,16 +1,19 @@
 #pragma once
 
+class GameMenu
+{ 
+public:
 
-enum class MenuChoice
-{
-	Player = 1,
-	Level,
-	HighScores,
-	End
+	enum class MenuChoice
+	{
+		Player = 1,
+		Level,
+		HighScores,
+		End
+	};
+MenuChoice menuChoice ();
+
 };
-
-MenuChoice menuChoice();
-
 
 
 /*For the purose of this project I would like a menu that allows the player to select one of two characters or symols to represt themselves.I

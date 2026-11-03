@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+
 namespace Input
 
 {
@@ -11,6 +12,9 @@ namespace Input
 
 		std::cout << prompt;
 		std::string input;
+		std::cin.clear();
+
+		std::cin.ignore(10000, '\n');
 
 		std::getline(std::cin, input);
 
@@ -35,17 +39,27 @@ namespace Input
 	{
 		while (true)
 		{
+			std::cin.clear();
+
 			std::cout << prompt;
 
 			std::string input;
 
-			std::getline(std::cin, input);
 
-			if (!input.empty())
+			if (std::getline(std::cin, input))
 			{
-				return input;
-			}
+
+				if (!input.empty())
+				{
+					return input;
+				}
 				std::cout << " [ERROR] You must ener a valid response.\n";
+			}
+			else 
+			{
+				break;
+			}
+
 		}
 	}
 }

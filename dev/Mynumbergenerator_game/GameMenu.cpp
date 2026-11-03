@@ -3,7 +3,7 @@
 #include <string>
 #include "Input.h"
 
-MenuChoice menuChoice ()
+GameMenu::MenuChoice GameMenu::menuChoice ()
 {
 	
 	std::cout << "1. Player\n";
@@ -13,7 +13,7 @@ MenuChoice menuChoice ()
 
 	int input = Input::GetNumber("Enter your choice: ", 1, 4);
 
-	return  static_cast<MenuChoice>(input);
+	return  static_cast<GameMenu::MenuChoice>(input);
 }
 
 
