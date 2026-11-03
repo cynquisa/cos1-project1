@@ -10,7 +10,7 @@ namespace Input
 	{
 		while (true)
 
-		std::cout << prompt;
+			std::cout << prompt;
 		std::string input;
 		std::cin.clear();
 
@@ -55,11 +55,13 @@ namespace Input
 				}
 				std::cout << " [ERROR] You must ener a valid response.\n";
 			}
-			else 
+			else
 			{
 				break;
 			}
 
 		}
+		return "";
+
 	}
 }

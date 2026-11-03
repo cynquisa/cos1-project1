@@ -51,6 +51,8 @@ int main()
 
 	while (isRunning)
 	{
+		std::cin.clear();
+
 		GameMenu::MenuChoice choice = gameMenu.menuChoice();
 
 		switch (choice)
