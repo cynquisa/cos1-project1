@@ -6,7 +6,7 @@
 namespace Input
 
 {
-	inline int GetNumber(const std::string& prompt, int min, int max)
+	static int GetNumber(const std::string& prompt, int min, int max)
 	{
 		while (true)
 
@@ -39,7 +39,7 @@ namespace Input
 	}
 
 
-	inline std::string GetString(const std::string& prompt)
+	static std::string GetString(const std::string& prompt)
 	{
 		while (true)
 		{
