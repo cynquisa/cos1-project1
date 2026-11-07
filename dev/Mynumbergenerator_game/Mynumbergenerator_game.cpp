@@ -13,6 +13,9 @@
 
 int main()
 {
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
+
 	Unlock safeGame;
 
 	GameMenu gameMenu;
