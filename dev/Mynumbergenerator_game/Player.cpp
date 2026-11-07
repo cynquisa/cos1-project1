@@ -8,7 +8,7 @@
 
 
 Player::Player(std::string name, std::string CharacterSymbol, int numOfMatches, int matchesWon )
-	: name(name), numOfMatches(numOfMatches), matchesWon(matchesWon), CharacterSymbol(CharacterSymbol)
+	: name(name), CharacterSymbol(CharacterSymbol), numOfMatches(numOfMatches), matchesWon(matchesWon)
 { 
 
 }
