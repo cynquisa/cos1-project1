@@ -13,9 +13,9 @@ Unlock::~Unlock()
 {
 
 }
-void Unlock::generate(int min,int max)
+void Unlock::generate(int min,int maxNumber)
 {
-	num = (std::rand() % (max - min + 1)) + min;
+	num = (std::rand() % (maxNumber - min + 1)) + min;
 }
 int Unlock::getValue() const
 {
@@ -69,7 +69,7 @@ bool Unlock::playLevel(Player& activePlayer)
 		}
 		else if (result == GuessResult::Correct)
 		{
-			std::cout << "\nAmazing!! You have crakced the safe and can escape now!\n";
+			std::cout << "\nAmazing!! You have cracked the safe and can escape now!\n";
 			crackedSafe = true;
 		}
 
