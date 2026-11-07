@@ -20,7 +20,7 @@ int main()
 
 	bool isRunning = true;
 
-	std::cout << " =*==*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n";
+/*	std::cout << " =*==*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n";
 	std::cout << "  *                                                         *  \n";
 	std::cout << " =*=              Welcome To Safe Escape                   =*= \n";
 	std::cout << "  *                                                         *  \n";
@@ -48,10 +48,10 @@ int main()
 	std::cout << " | ⇊                                                      ⇊ | \n";
 	std::cout << " |  ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄ | \n";
 	std::cout << " ⌊———————————————————————————————————————————————————————— ⌋ \n";
-
+*/
 	while (isRunning)
 	{
-		std::cin.clear();
+//		std::cin.clear();
 
 		GameMenu::MenuChoice choice = gameMenu.menuChoice();
 

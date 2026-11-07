@@ -13,7 +13,6 @@ namespace Input
 			std::cout << prompt;
 		std::string input;
 
-
 		if (std::getline(std::cin, input))
 		{
 			try
@@ -34,17 +33,16 @@ namespace Input
 		else
 		{
 			std::cin.clear();
+			clearerr(stdin);
+			std::cin.ignore(10000, '\n');
 		}
 	}
-}
-
 
 
 	inline std::string GetString(const std::string& prompt)
 	{
 		while (true)
 		{
-			std::cin.clear();
 
 			std::cout << prompt;
 
@@ -62,10 +60,9 @@ namespace Input
 			}
 			else
 			{
-				break;
+				std::cin.clear();
 			}
 
 		}
-		return "";
-
 	}
+}
