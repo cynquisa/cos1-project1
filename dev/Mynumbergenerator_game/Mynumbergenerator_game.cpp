@@ -8,6 +8,7 @@
 #include "Input.h"
 #include <string>
 #include <vector>
+#include <Windows.h>
 
 
 int main()

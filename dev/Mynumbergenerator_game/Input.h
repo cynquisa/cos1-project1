@@ -1,42 +1,41 @@
 #pragma once
 #include <iostream>
 #include <string>
-
+#include <limits>
 
 namespace Input
 
 {
-	static int GetNumber(const std::string& prompt, int min, int max)
+	static int GetNumber(const std::string& prompt, int min, int maxNumber)
 	{
-		while (true)
-
-		std::cout << prompt;
 		std::string input;
-
-		if (std::getline(std::cin, input))
+		while (true)
 		{
-			try
+			if (!std::cin)
 			{
-				int number = std::stoi(input);
-				if (number >= min && number <= max)
-				{
-					return number;
-				}
-				std::cout << "[ERROR] That number is not an avilable choice.\n\n";
+				std::cin.clear();
 			}
-			catch (...)
-			{
-				std::cout << "[ERROR] Invalid input. Please enter a valid number.\n\n";
-			}
+			std::cout << prompt;
+		
+		if (!std::getline(std::cin, input) || input.empty())
+		{
+			continue;
 		}
-
-		else
+		try
 		{
-			std::cin.clear();
-			std::cout << "[FATAL ERROR] Input stream error.\n";
-			return min;
+			int number = std::stoi(input);
+			if (number >= min && number <= maxNumber)
+			{
+				return number;
+			}
+			std::cout << "[ERROR] That number is not an available choice.\n\n";
+		}
+		catch (...)
+		{
+			std::cout << "[ERROR] Invalid input. Please enter a valid number.\n\n";
 		}
 	}
+}
 
 
 	static std::string GetString(const std::string& prompt)
@@ -52,16 +51,16 @@ namespace Input
 			if (std::getline(std::cin, input))
 			{
 
-				if (!input.empty())
-				{
-					return input;
-				}
-				std::cout << " [ERROR] You must ener a valid response.\n";
+			if (!input.empty())
+			{
+			return input;
+			}
+			std::cout << " [ERROR] You must ener a valid response.\n";
 			}
 			else
 			{
-				std::cin.clear();
-				return "";
+			std::cin.clear();
+			return "";
 			}
 
 		}
