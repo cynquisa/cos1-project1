@@ -9,6 +9,8 @@
 #include <string>
 #include <vector>
 #include <Windows.h>
+#include "ConsoleColor.h"
+
 
 
 int main()
@@ -24,34 +26,37 @@ int main()
 
 	bool isRunning = true;
 
-	std::cout << " =*==*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= \n";
-	std::cout << "  *                                                         *  \n";
-	std::cout << " =*=              Welcome To Safe Escape                   =*= \n";
-	std::cout << "  *                                                         *  \n";
-	std::cout << " =*=*=*=*=**=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n";
-	std::cout << " =*=*=*=*=**=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n";
-	std::cout << " ⌈—————————————————————————————————————————————————————————⌉ \n";
-	std::cout << " | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄ | \n";
-	std::cout << " | ⇊                                                      ⇊ | \n";
-	std::cout << " | ⇊                                                      ⇊ | \n";
-	std::cout << " | ⇊	    ========================================      ⇊ | \n";
-	std::cout << " | ⇊      |                                         |     ⇊ | \n";
-	std::cout << " | ⇊      |                                         |     ⇊ | \n";
-	std::cout << " | ⇊      |       ( 7 )  ( 8 )  ( 9 )               |     ⇊ | \n";
-	std::cout << " | ⇊      |       ( 4 )  ( 5 )  ( 6 )       _       |     ⇊ | \n";
-	std::cout << " | ⇊      |       ( 1 )  ( 2 )  ( 3 )     /   /     |     ⇊ | \n";
-	std::cout << " | ⇊      |                               |   |     |     ⇊ | \n";
-	std::cout << " | ⇊      |                               |   |     |     ⇊ | \n";
-	std::cout << " | ⇊      |                               |   |     |     ⇊ | \n";
-	std::cout << " | ⇊      |         _ _ _ _ _ _ _ _       | _ |     |     ⇊ | \n";
-	std::cout << " | ⇊      |       {                 }               |     ⇊ | \n";
-	std::cout << " | ⇊      |       {  L O C K E D    }               |     ⇊ | \n";
-	std::cout << " | ⇊      |       { _ _ _ _ _ _ _ _ }               |     ⇊ | \n";
-	std::cout << " | ⇊      |                                         |     ⇊ | \n";
-	std::cout << " | ⇊	    ========================================      ⇊ | \n";
-	std::cout << " | ⇊                                                      ⇊ | \n";
-	std::cout << " |  ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄ | \n";
-	std::cout << " ⌊———————————————————————————————————————————————————————— ⌋ \n";
+	ConsoleColor::Print(" =*==*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= \n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print("  *                                                         *  \n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print(" =*=              Welcome To Safe Escape                   =*= \n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print("  *                                                         *  \n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print(" =*=*=*=*=**=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print(" =*=*=*=*=**=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n", ConsoleColor::Ink::Cyan);
+
+
+
+	ConsoleColor::Print(" ⌈—————————————————————————————————————————————————————————⌉ \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄| \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊	    ========================================      ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                                         |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                                         |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       ( 7 )  ( 8 )  ( 9 )               |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       ( 4 )  ( 5 )  ( 6 )       _       |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       ( 1 )  ( 2 )  ( 3 )     /   /     |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                               |   |     |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                               |   |     |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                               |   |     |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |         _ _ _ _ _ _ _ _       | _ |     |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       {                 }               |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       {  L O C K E D    }               |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       { _ _ _ _ _ _ _ _ }               |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                                         |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊	    ========================================      ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄| \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" ⌊———————————————————————————————————————————————————————— ⌋ \n", ConsoleColor::Ink::Red);
 
 	while (isRunning)
 	{

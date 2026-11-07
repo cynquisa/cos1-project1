@@ -11,7 +11,7 @@ namespace ConsoleColor
 {
     enum class Ink
     {
-        Purple, Cyan, Green, Yellow, Red, White
+        Purple, Cyan, Green, Yellow, Red, White, Orange, Gold
     };
 
     inline void Print(const std::string& message, Ink ink)
@@ -47,6 +47,19 @@ namespace ConsoleColor
             {
                 color = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
             }
+            else if (ink == Ink::Orange) // regular text
+            {
+                color = FOREGROUND_RED | FOREGROUND_INTENSITY | FOREGROUND_GREEN;
+            } 
+            else if (ink == Ink::Gold) // regular text
+            {
+                color = FOREGROUND_RED | FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+            }
+
+
+
+
+
 
             std::cout.flush();
             SetConsoleTextAttribute(output, color);
