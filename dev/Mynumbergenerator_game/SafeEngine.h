@@ -14,7 +14,6 @@ private:
 
 	int num;
 
-
 public:
 
 	Unlock();

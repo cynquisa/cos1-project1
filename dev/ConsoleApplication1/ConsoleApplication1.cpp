@@ -3,13 +3,12 @@
 
 #include <iostream>
 
-
-
 int main()
 {
-	std string message = "Hello World";
-	std::cout << message << '\n';
-	return 0
+    int num = 10;
+    char offset = ‘A’;
+    std::cout << num + offset << ‘\n’;
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

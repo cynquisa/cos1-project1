@@ -12,27 +12,32 @@ namespace Input
 
 			std::cout << prompt;
 		std::string input;
-		std::cin.clear();
 
-		std::cin.ignore(10000, '\n');
 
-		std::getline(std::cin, input);
-
-		try
+		if (std::getline(std::cin, input))
 		{
-			int number = std::stoi(input);
-			if (number >= min && number <= max)
+			try
 			{
-				return number;
+				int number = std::stoi(input);
+				if (number >= min && number <= max)
+				{
+					return number;
+				}
+				std::cout << "[ERROR] That number is not an avilable choice.\n\n";
 			}
-			std::cout << "[ERROR] That number is not an avilable choice.\n\n";
-		}
-		catch (...)
-		{
-			std::cout << "[ERROR] Invalid input. Please enter a valid number.\n\n";
+			catch (...)
+			{
+				std::cout << "[ERROR] Invalid input. Please enter a valid number.\n\n";
+			}
 		}
 
+		else
+		{
+			std::cin.clear();
+		}
 	}
+}
+
 
 
 	inline std::string GetString(const std::string& prompt)
@@ -64,4 +69,3 @@ namespace Input
 		return "";
 
 	}
-}
