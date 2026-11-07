@@ -24,18 +24,8 @@ GameMenu::MenuChoice GameMenu::menuChoice ()
 
 
 
-/*I am getting the hang of this. I can see my menu comming together. I am not sure where to go next but I will keep researching.
+//I am getting the hang of this. I can see my menu comming together. I am not sure where to go next but I will keep researching.
 
-
-	int input = 0;
-	std::cout << "1. player\n2. Select Level\n3. High Scores\n4. Exit\n";
-	std::cout << "Enter your choice: ";
-	std::cin >> input;
-
-	MenuChoice choice = static_cast<MenuChoice>(input);
-	menuChoice;
-	return 0;
-	this how I couud test the menu in the main.*/
 
 
 

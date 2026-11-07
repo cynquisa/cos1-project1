@@ -10,7 +10,7 @@ namespace Input
 	{
 		while (true)
 
-			std::cout << prompt;
+		std::cout << prompt;
 		std::string input;
 
 		if (std::getline(std::cin, input))
@@ -33,8 +33,8 @@ namespace Input
 		else
 		{
 			std::cin.clear();
-			clearerr(stdin);
-			std::cin.ignore(10000, '\n');
+			std::cout << "[FATAL ERROR] Input stream error.\n";
+			return min;
 		}
 	}
 
@@ -61,6 +61,7 @@ namespace Input
 			else
 			{
 				std::cin.clear();
+				return "";
 			}
 
 		}
