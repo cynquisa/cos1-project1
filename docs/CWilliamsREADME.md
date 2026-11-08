@@ -31,8 +31,8 @@ Each week I will summarize my milestone activity and progress by writing a stand
 This week I have made a plan of attack to accomplish creating a console survival game. I would like to make a guessing game with a theme. I am nervous about my  project becoming complex. I know at this point I am in my second year of programing and I feel little overwhelmed. This biggest problem has been decided what will be needed and where to begin. While researching different types of console app, I have realized for a console base game that does not use graphics engine this will be a complex project because of the different element that go into preparation of a game or app. Me being able to lock down what I would like to create would be accomplishment for this week. I was able to create three class that will get me started and I know at this point I will need more research. My next step is to continue my work in progress. I plan this week to start working on the main menu and the loop that will run the game.
 
 ### Week 2
+I have finally broken something. I have encountered a major bug with my input validation. My program compiles but does not run . I know that it's the validation. This week I focused on creating the main() and my is running loop. In my mind, I challenged myself to keep the main completely clean of code that could be handled in a header or source file. I plan to keep my focus on getting the game running. I am excited that I have gotten to a point where my game almost working, and I know that it will work because I have an infinite loop. Last week , I had nothing in the main . As for usability, my input validation is the area I am working on now. Once my protype is playable, I want to add color and more ascii art. I am playing idea of maybe another level where the player can play a version of the game with ascii faces I use for character selection.
 
-My next stand up will go here...
 
 ### Week 3
 

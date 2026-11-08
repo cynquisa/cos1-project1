@@ -122,20 +122,20 @@ if (!crackedSafe)
 {
 	
 	std::cout << "                   ◜⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁◝\n";
-	std::cout << "                   §                               §\n";
-	std::cout << "                   §                               §\n";
-	std::cout << "                   §                               §\n";
-	std::cout << "                   §           R  I  P             §\n";
-	std::cout << "                   §                               §\n";
-	std::cout << "                   §             (*)               §\n";
-	std::cout << "                   §           (*)(+)              §\n";
-	std::cout << "                   §          (+)(*)(+)            §\n";
-	std::cout << "                   §          «»«»«»«»             §\n";
-	std::cout << "                   §           «     »             §\n";
-	std::cout << "                   §            «   »              §\n";
-	std::cout << "                   §              —                §\n";
-	std::cout << "                   §           «»«»«»«»            §\n";
-	std::cout << "                   §                               §\n";
+	std::cout << "                   §                          § \n";
+	std::cout << "                   §                          § \n";
+	std::cout << "                   §                          § \n";
+	std::cout << "                   §         R  I  P          § \n";
+	std::cout << "                   §                          § \n";
+	std::cout << "                   §           (*)            § \n";
+	std::cout << "                   §         (*)(+)           § \n";
+	std::cout << "                   §        (+)(*)(+)         § \n";
+	std::cout << "                   §         «»«»«»»          § \n";
+	std::cout << "                   §          «   »           § \n";
+	std::cout << "                   §          «   »           § \n";
+	std::cout << "                   §            —             § \n";
+	std::cout << "                   §         «»«»«»«»         § \n";
+	std::cout << "                   §                          § \n";
 
 
 	ConsoleColor::Print("GAMEOVER !! You have run out of guessess. The correct combination was: " + std::to_string(getValue()) + "\n", ConsoleColor::Ink::Red);
