@@ -7,10 +7,13 @@
 GameMenu::MenuChoice GameMenu::menuChoice ()
 {
 	
-	ConsoleColor::Print("1. Player\n", ConsoleColor::Ink::Cyan);
-	ConsoleColor::Print( "2. Select Level\n", ConsoleColor::Ink::Purple);
-	ConsoleColor::Print("3. High Scores\n", ConsoleColor::Ink::Red);
-	ConsoleColor::Print("4. End\n", ConsoleColor::Ink::Green);
+	ConsoleColor::Print("1. Player\n", ConsoleColor::Ink::Yellow);
+	ConsoleColor::Print( "2. Select Level\n", ConsoleColor::Ink::Yellow);
+	ConsoleColor::Print("3. High Scores\n", ConsoleColor::Ink::Yellow);
+	ConsoleColor::Print("4. End\n", ConsoleColor::Ink::Yellow);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+
 
 	int input = Input::GetNumber("Enter your choice: ", 1, 4);
 

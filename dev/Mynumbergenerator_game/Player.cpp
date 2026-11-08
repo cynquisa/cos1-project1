@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include "ConsoleColor.h"
 
 
 
@@ -20,7 +20,10 @@ Player::Player(std::string name, std::string CharacterSymbol, int numOfMatches, 
 Player Player::createNewPlayer()
 
 {
-	std::cout << "※※※※※※※※※※※※※※※※※※ Player Creation ※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n";
+	ConsoleColor::Print( "※※※※※※※※※※※※※※※※※※ Player Creation ※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n", ConsoleColor::Ink::Purple);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+
 
 	std::string nameInput = Input::GetString("Enter your player name please: ");
 
@@ -31,16 +34,24 @@ Player Player::createNewPlayer()
 	characterChoice.push_back("<>_<>");
 
 	
-	std::cout << "\nChoose your character: \n";
+	ConsoleColor::Print("\nChoose your character: \n", ConsoleColor::Ink::Yellow);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+
+	
 
 	for (size_t i = 0; i < characterChoice.size(); ++i)
 	{
-		std::cout << i + 1 << ". Faces " << characterChoice[i] << "\n";
+		ConsoleColor::Print(std::to_string(i + 1) + ". Faces " + characterChoice[i] + "\n", ConsoleColor::Ink::Cyan);
 	}
+	
+
 	int choice = Input::GetNumber("Select choice (1-4): ", 1, static_cast<int>(characterChoice.size()));
 	
 	std::string selectedSymbol = characterChoice[choice - 1];
-	std::cout << "Your player is created! Welcome,  " << nameInput << " " << selectedSymbol << "\n\n";
+
+	ConsoleColor::Print("Your player is created! Welcome,  " + nameInput + " " + selectedSymbol + "\n\n", ConsoleColor::Ink::Green);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	
 
 	return Player(nameInput, selectedSymbol, 0, 0);
 }
@@ -76,9 +87,12 @@ void Player::recordResult(bool won)
 
 void Player::displayHighScore() const
 {
-	std::cout << "\n========================================================== = \n";
-	std::cout << "Player Stats: " << name << "Avatar: " << CharacterSymbol << '\n';
-	std::cout << "\n========================================================== = \n";
+	ConsoleColor::Print("\n========================================================== = \n", ConsoleColor::Ink::Purple);
+	ConsoleColor::Print("Player Stats: ", ConsoleColor::Ink::Purple);
+	ConsoleColor::Print(name, ConsoleColor::Ink::Purple);
+	ConsoleColor::Print( " Avatar: ", ConsoleColor::Ink::Purple);
+	ConsoleColor::Print((CharacterSymbol + "\n"), ConsoleColor::Ink::Purple);
+	ConsoleColor::Print("\n========================================================== = \n", ConsoleColor::Ink::Purple);
 
 	std::cout << "Games Played: " << numOfMatches << '\n';
 
