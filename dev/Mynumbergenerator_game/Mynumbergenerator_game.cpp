@@ -8,52 +8,69 @@
 #include "Input.h"
 #include <string>
 #include <vector>
+#include <Windows.h>
+#include "ConsoleColor.h"
+
 
 
 int main()
 {
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
+
 	Unlock safeGame;
+
+	GameMenu gameMenu;
 
 	Player* activePlayer = nullptr;
 
 	bool isRunning = true;
 
-	std::cout << " =*==*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n";
-	std::cout << "  *                                                         *  \n";
-	std::cout << " =*=              Welcome To Safe Escape                   =*= \n";
-	std::cout << "  *                                                         *  \n";
-	std::cout << " =*=*=*=*=**=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n";
-	std::cout << " =*=*=*=*=**=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n";
-	std::cout << " ⌈—————————————————————————————————————————————————————————⌉ \n";
-	std::cout << " | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄ | \n";
-	std::cout << " | ⇊                                                      ⇊ | \n";
-	std::cout << " | ⇊                                                      ⇊ | \n";
-	std::cout << " | ⇊	    ==========================================      ⇊ | \n";
-	std::cout << " | ⇊      |                                         |     ⇊ | \n";
-	std::cout << " | ⇊      |                                         |     ⇊ | \n";
-	std::cout << " | ⇊      |       ( 7 )  ( 8 )  ( 9 )               |     ⇊ | \n";
-	std::cout << " | ⇊      |       ( 4 )  ( 5 )  ( 6 )       _       |     ⇊ | \n";
-	std::cout << " | ⇊      |       ( 1 )  ( 2 )  ( 3 )     /   /     |     ⇊ | \n";
-	std::cout << " | ⇊      |                               |   |     |     ⇊ | \n";
-	std::cout << " | ⇊      |                               |   |     |     ⇊ | \n";
-	std::cout << " | ⇊      |                               |   |     |     ⇊ | \n";
-	std::cout << " | ⇊      |         _ _ _ _ _ _ _ _       | _ |     |     ⇊ | \n";
-	std::cout << " | ⇊      |       {                 }               |     ⇊ | \n";
-	std::cout << " | ⇊      |       {  L O C K E D    }               |     ⇊ | \n";
-	std::cout << " | ⇊      |       { _ _ _ _ _ _ _ _ }               |     ⇊ | \n";
-	std::cout << " | ⇊      |                                         |     ⇊ | \n";
-	std::cout << " | ⇊	    ==========================================      ⇊ | \n";
-	std::cout << " | ⇊                                                      ⇊ | \n";
-	std::cout << " |  ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄ | \n";
-	std::cout << " ⌊———————————————————————————————————————————————————————— ⌋ \n";
+	ConsoleColor::Print(" =*==*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= \n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print("  *                                                         *  \n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print(" =*=              Welcome To Safe Escape                   =*= \n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print("  *                                                         *  \n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print(" =*=*=*=*=**=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print(" =*=*=*=*=**=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	
+	ConsoleColor::Print(" ⌈—————————————————————————————————————————————————————————⌉ \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄| \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊	    ========================================      ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                                         |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                                         |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       ( 7 )  ( 8 )  ( 9 )               |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       ( 4 )  ( 5 )  ( 6 )       _       |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       ( 1 )  ( 2 )  ( 3 )     /   /     |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                               |   |     |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                               |   |     |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                               |   |     |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |         _ _ _ _ _ _ _ _       | _ |     |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       {                 }               |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       {  L O C K E D    }               |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |       { _ _ _ _ _ _ _ _ }               |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊      |                                         |     ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊	    ========================================      ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄| \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print(" ⌊———————————————————————————————————————————————————————— ⌋ \n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+
 
 	while (isRunning)
 	{
-		MenuChoice choice = menuChoice();
+		std::cin.clear();
+
+		GameMenu::MenuChoice choice = gameMenu.menuChoice();
 
 		switch (choice)
 		{
-		case MenuChoice::Player:
+		case GameMenu::MenuChoice::Player:
 		{
 			if (activePlayer != nullptr)
 			{
@@ -64,7 +81,7 @@ int main()
 			activePlayer = new Player(createdPlayer);
 			break;
 		}
-		case MenuChoice::Level:
+		case GameMenu::MenuChoice::Level:
 		{
 			if (activePlayer == nullptr)
 			{
@@ -75,8 +92,8 @@ int main()
 				safeGame.playLevel(*activePlayer);
 			}
 			break;
-
-		case MenuChoice::HighScores:
+		}
+		case GameMenu::MenuChoice::HighScores:
 		{
 			if (activePlayer != nullptr) activePlayer->displayHighScore();
 
@@ -84,21 +101,22 @@ int main()
 
 			break;
 		}
-		case MenuChoice::End:
+		case GameMenu::MenuChoice::End:
 		{
 			std::cout << "GAMEOVER  X_X\n";
 			isRunning = false;
 			break;
 		}
-		std::cout << " =*==*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n";
 		}
+		std::cout << " =*==*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* \n";
+	
 
 		}
 		if (activePlayer != nullptr) delete activePlayer;
 		return 0;
 	}
 
-};
+
 
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

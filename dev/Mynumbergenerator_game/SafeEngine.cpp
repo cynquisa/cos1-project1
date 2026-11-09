@@ -4,6 +4,8 @@
 #include <ctime>
 #include <string>
 #include <iostream>
+#include "ConsoleColor.h"
+
 
 Unlock::Unlock() : num(1)
 {
@@ -13,9 +15,9 @@ Unlock::~Unlock()
 {
 
 }
-void Unlock::generate(int min,int max)
+void Unlock::generate(int min,int maxNumber)
 {
-	num = (std::rand() % (max - min + 1)) + min;
+	num = (std::rand() % (maxNumber - min + 1)) + min;
 }
 int Unlock::getValue() const
 {
@@ -35,9 +37,12 @@ GuessResult Unlock::evaluateGuess(int userGuess) const
 }
 bool Unlock::playLevel(Player& activePlayer)
 {
-	std::cout << "Select Difficulty Level:\n";
-	std::cout << "1. Easy Guess a number between 1 - 100 out of 15 chances.\n";
-	std::cout << "2. Hard Guess a number between 1 - 150 out of 12 chances.\n";
+	ConsoleColor::Print("Select Difficulty Level:\n", ConsoleColor::Ink::Purple);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+
+	ConsoleColor::Print("1. Easy Guess a number between 1 - 100 out of 15 chances.\n", ConsoleColor::Ink::Yellow);
+	ConsoleColor::Print("2. Hard Guess a number between 1 - 150 out of 12 chances.\n", ConsoleColor::Ink::Yellow);
 	
 	int levelChoice = Input::GetNumber("Enter game mode (1-2) : ", 1, 2);
 	int maxNumber = (levelChoice == 1) ? 100 : 150;
@@ -48,9 +53,15 @@ bool Unlock::playLevel(Player& activePlayer)
 	generate(1, maxNumber);
 
 
-	std::cout << "\nYOU ARE TRAPPEd!! You must guess the combination to escape.\n";
+	ConsoleColor::Print("\nYOU ARE TRAPPEd!! You must guess the combination to escape.\n", ConsoleColor::Ink::Red);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+
 	std::cout << "Enter a number between 1 and " << maxNumber << ".\n";
-	std::cout << "You have " << chancesLeft << "attempts remaining.\n";
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+
+	ConsoleColor::Print("You have " + std::to_string (chancesLeft) + "attempts remaining.\n", ConsoleColor::Ink::Red);
 
 	while (chancesLeft > 0 && !crackedSafe)
 	{
@@ -69,20 +80,65 @@ bool Unlock::playLevel(Player& activePlayer)
 		}
 		else if (result == GuessResult::Correct)
 		{
-			std::cout << "\nAmazing!! You have crakced the safe and can escape now!\n";
+			ConsoleColor::Print(" ⌈—————————————————————————————————————————————————————————⌉ \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄| \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊	    ========================================      ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |                                         | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |                                         | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |       ( 7 )  ( 8 )  ( 9 )               | ⟩   ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |       ( 4 )  ( 5 )  ( 6 )       _       | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |       ( 1 )  ( 2 )  ( 3 )     /   /     | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |                               |   |     | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |                               |   |     | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |                               |   |     | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |         _ _ _ _ _ _ _ _       | _ |     | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |       {                 }               | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |       {    O P E N      }               | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |       { _ _ _ _ _ _ _ _ }               | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |                                         | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊	    ========================================      ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄| \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" ⌊———————————————————————————————————————————————————————— ⌋ \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+			ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+			ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+
+			ConsoleColor::Print("\nAmazing!! You have cracked the safe and can escape now!\n", ConsoleColor::Ink::Green);
 			crackedSafe = true;
 		}
 
 		if (!crackedSafe && chancesLeft > 0)
 		{
 			std::cout << "Chances remaining: " << chancesLeft << "\n\n";
+
 		}
 
 	}
 
 if (!crackedSafe)
 {
-	std::cout << "GAMEOVER !! You have run out of guessess. The correct combination was: " << getValue() << "\n";
+	
+	std::cout << "                   ◜⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁◝\n";
+	std::cout << "                   §                          § \n";
+	std::cout << "                   §                          § \n";
+	std::cout << "                   §                          § \n";
+	std::cout << "                   §         R  I  P          § \n";
+	std::cout << "                   §                          § \n";
+	std::cout << "                   §           (*)            § \n";
+	std::cout << "                   §         (*)(+)           § \n";
+	std::cout << "                   §        (+)(*)(+)         § \n";
+	std::cout << "                   §         «»«»«»»          § \n";
+	std::cout << "                   §          «   »           § \n";
+	std::cout << "                   §          «   »           § \n";
+	std::cout << "                   §            —             § \n";
+	std::cout << "                   §         «»«»«»«»         § \n";
+	std::cout << "                   §                          § \n";
+
+
+	ConsoleColor::Print("GAMEOVER !! You have run out of guessess. The correct combination was: " + std::to_string(getValue()) + "\n", ConsoleColor::Ink::Red);
 }
 	activePlayer.recordResult(crackedSafe);
 
