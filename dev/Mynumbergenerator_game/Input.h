@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "ConsoleColor.h"
 
 
 namespace Input
@@ -64,5 +65,11 @@ namespace Input
 			}
 
 		}
+	}
+	static void Pause(const std::string& prompt = "\nPress Enter to continue...", ConsoleColor::Ink color = ConsoleColor::Ink::Yellow)
+	{
+		ConsoleColor::Print(prompt, color);
+		std::string dummy;
+		std::getline(std::cin, dummy);
 	}
 }

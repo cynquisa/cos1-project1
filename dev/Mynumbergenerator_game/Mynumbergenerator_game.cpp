@@ -59,7 +59,7 @@ int main()
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
-
+	Input::Pause("Press Enter to open the main menu.....");
 
 	while (isRunning)
 	{
