@@ -147,6 +147,7 @@ if (!crackedSafe)
 }
 	activePlayer.recordResult(crackedSafe);
 
+	Input::Pause("\nPress Enter to return to the main menu...");
 	return crackedSafe;
 }
 
