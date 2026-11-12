@@ -113,7 +113,7 @@ bool Unlock::playLevel(Player& activePlayer)
 		if (!crackedSafe && chancesLeft > 0)
 		{
 			ConsoleColor::Print( "Chances remaining: " + std::to_string( chancesLeft) + "\n\n", ConsoleColor::Ink::Red);
-			crackedSafe = true;
+			crackedSafe = false;
 
 		}
 
