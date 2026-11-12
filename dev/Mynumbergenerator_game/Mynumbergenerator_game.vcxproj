@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="GameMenu.cpp" />
     <ClCompile Include="Mynumbergenerator_game.cpp" />
+    <ClCompile Include="new art.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SafeEngine.cpp" />
   </ItemGroup>

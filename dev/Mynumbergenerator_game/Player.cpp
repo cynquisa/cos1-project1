@@ -20,7 +20,7 @@ Player::Player(std::string name, std::string CharacterSymbol, int numOfMatches, 
 Player Player::createNewPlayer()
 
 {
-	ConsoleColor::Print( "※※※※※※※※※※※※※※※※※※ Player Creation ※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n", ConsoleColor::Ink::Purple);
+	ConsoleColor::Print( "※※※※※※※※※※※※※※※※※※ Player Creation ※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n", ConsoleColor::Ink::Cyan);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 
@@ -34,7 +34,7 @@ Player Player::createNewPlayer()
 	characterChoice.push_back("<>_<>");
 
 	
-	ConsoleColor::Print("\nChoose your character: \n", ConsoleColor::Ink::Yellow);
+	ConsoleColor::Print("\nChoose your character: \n", ConsoleColor::Ink::White);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 
 	

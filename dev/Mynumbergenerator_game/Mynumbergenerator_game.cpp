@@ -38,7 +38,6 @@ int main()
 	ConsoleColor::Print(" ⌈—————————————————————————————————————————————————————————⌉ \n", ConsoleColor::Ink::Red);
 	ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄| \n", ConsoleColor::Ink::Red);
 	ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Red);
-	ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Red);
 	ConsoleColor::Print(" | ⇊	    ========================================      ⇊ | \n", ConsoleColor::Ink::Red);
 	ConsoleColor::Print(" | ⇊      |                                         |     ⇊ | \n", ConsoleColor::Ink::Red);
 	ConsoleColor::Print(" | ⇊      |                                         |     ⇊ | \n", ConsoleColor::Ink::Red);

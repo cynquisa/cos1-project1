@@ -37,12 +37,12 @@ GuessResult Unlock::evaluateGuess(int userGuess) const
 }
 bool Unlock::playLevel(Player& activePlayer)
 {
-	ConsoleColor::Print("Select Difficulty Level:\n", ConsoleColor::Ink::Purple);
+	ConsoleColor::Print("Select Difficulty Level:\n", ConsoleColor::Ink::Cyan);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 
-	ConsoleColor::Print("1. Easy Guess a number between 1 - 100 out of 15 chances.\n", ConsoleColor::Ink::Yellow);
-	ConsoleColor::Print("2. Hard Guess a number between 1 - 150 out of 12 chances.\n", ConsoleColor::Ink::Yellow);
+	ConsoleColor::Print("1. Easy Guess a number between 1 - 100 out of 15 chances.\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("2. Hard Guess a number between 1 - 150 out of 12 chances.\n", ConsoleColor::Ink::White);
 	
 	int levelChoice = Input::GetNumber("Enter game mode (1-2) : ", 1, 2);
 	int maxNumber = (levelChoice == 1) ? 100 : 150;
@@ -112,7 +112,8 @@ bool Unlock::playLevel(Player& activePlayer)
 
 		if (!crackedSafe && chancesLeft > 0)
 		{
-			std::cout << "Chances remaining: " << chancesLeft << "\n\n";
+			ConsoleColor::Print( "Chances remaining: " + std::to_string( chancesLeft) + "\n\n", ConsoleColor::Ink::Red);
+			crackedSafe = true;
 
 		}
 
@@ -120,22 +121,26 @@ bool Unlock::playLevel(Player& activePlayer)
 
 if (!crackedSafe)
 {
-	
-	std::cout << "                   ◜⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁◝\n";
-	std::cout << "                   §                          § \n";
-	std::cout << "                   §                          § \n";
-	std::cout << "                   §                          § \n";
-	std::cout << "                   §         R  I  P          § \n";
-	std::cout << "                   §                          § \n";
-	std::cout << "                   §           (*)            § \n";
-	std::cout << "                   §         (*)(+)           § \n";
-	std::cout << "                   §        (+)(*)(+)         § \n";
-	std::cout << "                   §         «»«»«»»          § \n";
-	std::cout << "                   §          «   »           § \n";
-	std::cout << "                   §          «   »           § \n";
-	std::cout << "                   §            —             § \n";
-	std::cout << "                   §         «»«»«»«»         § \n";
-	std::cout << "                   §                          § \n";
+	std::cout << "\033[5;33m" << R"(	        ___
+    .-"`   `"-.
+  .'    .-.    '.
+ /     (/^\)     \
+/  #   (\ /)      \
+| #    .-'-.      |
+|     /(_I_)\     |
+;     \\) (//     ;
+ ;     / Y \     ;
+  \    \ | /    /
+   \    \|/    /
+    \   /|\   /
+     |  \|/  |
+     |__/Y\__|
+     {=======}
+     }======={
+     {=======}
+     }======={
+  jgs{=======}
+      `""u""` )" << "033[0m\n";
 
 
 	ConsoleColor::Print("GAMEOVER !! You have run out of guessess. The correct combination was: " + std::to_string(getValue()) + "\n", ConsoleColor::Ink::Red);
