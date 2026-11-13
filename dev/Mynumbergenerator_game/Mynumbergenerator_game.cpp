@@ -98,6 +98,7 @@ int main()
 
 			else std::cout << "\nNo players have been recorded.\n";
 
+			Input::Pause("Press Enter to retunr to the main menu...");
 			break;
 		}
 		case GameMenu::MenuChoice::End:

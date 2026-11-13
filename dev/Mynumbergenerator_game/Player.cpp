@@ -26,6 +26,7 @@ Player Player::createNewPlayer()
 
 
 	std::string nameInput = Input::GetString("Enter your player name please: ");
+	system("cls");
 
 	std::vector<std::string> characterChoice;
 	characterChoice.push_back("¬_¬");
@@ -49,10 +50,11 @@ Player Player::createNewPlayer()
 	
 	std::string selectedSymbol = characterChoice[choice - 1];
 
+
 	ConsoleColor::Print("Your player is created! Welcome,  " + nameInput + " " + selectedSymbol + "\n\n", ConsoleColor::Ink::Green);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 	
-
+	Input::Pause("Press Enter to continue...");
 	return Player(nameInput, selectedSymbol, 0, 0);
 }
 

@@ -37,6 +37,9 @@ GuessResult Unlock::evaluateGuess(int userGuess) const
 }
 bool Unlock::playLevel(Player& activePlayer)
 {
+	system("cls");
+
+
 	ConsoleColor::Print("Select Difficulty Level:\n", ConsoleColor::Ink::Cyan);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
@@ -47,10 +50,34 @@ bool Unlock::playLevel(Player& activePlayer)
 	int levelChoice = Input::GetNumber("Enter game mode (1-2) : ", 1, 2);
 	int maxNumber = (levelChoice == 1) ? 100 : 150;
 	int chancesLeft = (levelChoice == 1) ? 15 : 12;
+	system("cls");
 
 	bool crackedSafe = false;
 
 	generate(1, maxNumber);
+
+	std::cout << "\033[5;31m" << R"(	        ___
+    .-"`   `"-.
+  .'    .-.    '.
+ /     (/^\)     \             __________________________ 
+/  #   (\ /)      \          |                           |
+| #    .-'-.      |          |  ( 7 ) ( 8 ) ( 9 )   __   |
+|     /(_I_)\     |          |  ( 4 ) ( 5 ) ( 6 )  |  |  |
+;     \\) (//     ;          |  ( 1 ) ( 2 ) ( 3 )  |  |  |
+ ;     / Y \     ;           |     _____________   |  |  |
+  \    \ | /    /            |    |    LOCKED   |   \_|  |
+   \    \|/    /             |     ¯¯¯¯¯¯¯¯¯¯¯¯¯         |
+    \   /|\   /              |___________________________|
+     |  \|/  |
+     |__/Y\__|
+)" << "\033[0m";
+	std::cout << "\033[90m" << R"(
+     {=======}
+     }======={             You awaken in room with a note. 
+     {=======}             You must find the code esacpe.  
+     }======={
+  jgs{=======}
+      `""u""` )" << "\033[0m\n";
 
 
 	ConsoleColor::Print("\nYOU ARE TRAPPEd!! You must guess the combination to escape.\n", ConsoleColor::Ink::Red);
@@ -84,10 +111,10 @@ bool Unlock::playLevel(Player& activePlayer)
 			ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄| \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Green);
-			ConsoleColor::Print(" | ⇊	    ========================================      ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊	    ========================================       ⇊ | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊      |                                         | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊      |                                         | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
-			ConsoleColor::Print(" | ⇊      |       ( 7 )  ( 8 )  ( 9 )               | ⟩   ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊      |       ( 7 )  ( 8 )  ( 9 )               | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊      |       ( 4 )  ( 5 )  ( 6 )       _       | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊      |       ( 1 )  ( 2 )  ( 3 )     /   /     | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊      |                               |   |     | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
@@ -121,26 +148,6 @@ bool Unlock::playLevel(Player& activePlayer)
 
 if (!crackedSafe)
 {
-	std::cout << "\033[5;33m" << R"(	        ___
-    .-"`   `"-.
-  .'    .-.    '.
- /     (/^\)     \
-/  #   (\ /)      \
-| #    .-'-.      |
-|     /(_I_)\     |
-;     \\) (//     ;
- ;     / Y \     ;
-  \    \ | /    /
-   \    \|/    /
-    \   /|\   /
-     |  \|/  |
-     |__/Y\__|
-     {=======}
-     }======={
-     {=======}
-     }======={
-  jgs{=======}
-      `""u""` )" << "033[0m\n";
 
 
 	ConsoleColor::Print("GAMEOVER !! You have run out of guessess. The correct combination was: " + std::to_string(getValue()) + "\n", ConsoleColor::Ink::Red);
