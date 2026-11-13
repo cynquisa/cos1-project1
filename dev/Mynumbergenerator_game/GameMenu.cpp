@@ -18,8 +18,8 @@ GameMenu::MenuChoice GameMenu::menuChoice ()
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 
 
-	ConsoleColor::Print("1. Player\n", ConsoleColor::Ink::White);
-	ConsoleColor::Print( "2. Select Level\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("1. Create Player\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print( "2. Play\n", ConsoleColor::Ink::White);
 	ConsoleColor::Print("3. High Scores\n", ConsoleColor::Ink::White);
 	ConsoleColor::Print("4. End\n", ConsoleColor::Ink::White);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);

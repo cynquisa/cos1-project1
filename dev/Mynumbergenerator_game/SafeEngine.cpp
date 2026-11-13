@@ -38,14 +38,18 @@ GuessResult Unlock::evaluateGuess(int userGuess) const
 bool Unlock::playLevel(Player& activePlayer)
 {
 	system("cls");
-
-
-	ConsoleColor::Print("Select Difficulty Level:\n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print("※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n", ConsoleColor::Ink::Purple);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("           Select Your Difficulty Level:\n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n", ConsoleColor::Ink::Purple);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 
-	ConsoleColor::Print("1. Easy Guess a number between 1 - 100 out of 15 chances.\n", ConsoleColor::Ink::White);
-	ConsoleColor::Print("2. Hard Guess a number between 1 - 150 out of 12 chances.\n", ConsoleColor::Ink::White);
+
+	ConsoleColor::Print("1. Easy  (Guess a number between 1 - 100 out of 15 chances.)\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("2. Hard  (Guess a number between 1 - 150 out of 12 chances.)\n", ConsoleColor::Ink::White);
 	
 	int levelChoice = Input::GetNumber("Enter game mode (1-2) : ", 1, 2);
 	int maxNumber = (levelChoice == 1) ? 100 : 150;
@@ -73,8 +77,8 @@ bool Unlock::playLevel(Player& activePlayer)
 )" << "\033[0m";
 	std::cout << "\033[90m" << R"(
      {=======}
-     }======={             You awaken in room with a note. 
-     {=======}             You must find the code esacpe.  
+     }======={             You look around, no winows,and one door.
+     {=======}                   You must find the code esacpe.  
      }======={
   jgs{=======}
       `""u""` )" << "\033[0m\n";
@@ -108,7 +112,7 @@ bool Unlock::playLevel(Player& activePlayer)
 		else if (result == GuessResult::Correct)
 		{
 			ConsoleColor::Print(" ⌈—————————————————————————————————————————————————————————⌉ \n", ConsoleColor::Ink::Green);
-			ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄| \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄|       | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊	    ========================================       ⇊ | \n", ConsoleColor::Ink::Green);
@@ -125,15 +129,15 @@ bool Unlock::playLevel(Player& activePlayer)
 			ConsoleColor::Print(" | ⇊      |       {    O P E N      }               | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊      |       { _ _ _ _ _ _ _ _ }               | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊      |                                         | ⟩    ⇊ | \n", ConsoleColor::Ink::Green);
-			ConsoleColor::Print(" | ⇊	    ========================================      ⇊ | \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇊	    ========================================       ⇊ | \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" | ⇊                                                      ⇊ | \n", ConsoleColor::Ink::Green);
-			ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄| \n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print(" | ⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄⇄| \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print(" ⌊———————————————————————————————————————————————————————— ⌋ \n", ConsoleColor::Ink::Green);
 			ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 			ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 			ConsoleColor::Print("\n", ConsoleColor::Ink::White);
 
-			ConsoleColor::Print("\nAmazing!! You have cracked the safe and can escape now!\n", ConsoleColor::Ink::Green);
+			ConsoleColor::Print("\nAmazing!! You have cracked the safe and now you can escape now!\n", ConsoleColor::Ink::Green);
 			crackedSafe = true;
 		}
 

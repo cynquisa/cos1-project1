@@ -20,13 +20,25 @@ Player::Player(std::string name, std::string CharacterSymbol, int numOfMatches, 
 Player Player::createNewPlayer()
 
 {
-	ConsoleColor::Print( "※※※※※※※※※※※※※※※※※※ Player Creation ※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n", ConsoleColor::Ink::Cyan);
-	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
-	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
-
-
-	std::string nameInput = Input::GetString("Enter your player name please: ");
 	system("cls");
+
+	ConsoleColor::Print( "※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n", ConsoleColor::Ink::Green);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("             Player Creation\n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n", ConsoleColor::Ink::Green);
+
+
+	std::string nameInput = Input::GetString("Enter your name please: ");
+	system("cls");
+	ConsoleColor::Print("※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n", ConsoleColor::Ink::Purple);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("             Choose Your Avatar\n", ConsoleColor::Ink::Cyan);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("\n", ConsoleColor::Ink::White);
+	ConsoleColor::Print("※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※\n", ConsoleColor::Ink::Purple);
+
 
 	std::vector<std::string> characterChoice;
 	characterChoice.push_back("¬_¬");
